@@ -4,7 +4,7 @@ let compCounter = 0;
 let tieCounter = 0;
 
 for (let i = 0; i < 10; i++){
-    let selectionPrompt = prompt("Select rock (r), paper (p), or scissors (s):")
+    let selectionPrompt = prompt("Select rock (r), paper (p), or scissors (s):").toLowerCase()
     let compChoice = rps[Math.floor(Math.random() * rps.length)];
     if(selectionPrompt === 'r' && compChoice === 'r'){
         tieCounter++;
