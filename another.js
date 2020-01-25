@@ -4,7 +4,7 @@ losses = 0
 ties = 0
 
 for (i = 0; i < 3; i++){
-    let selectionPrompt = prompt(`Pick 'r' for Rock, 'p' for Paper, or 's' for Scissors.`)
+    let selectionPrompt = prompt(`Pick 'r' for Rock, 'p' for Paper, or 's' for Scissors.`).toLowerCase();
     let compChoice = rps[Math.floor(Math.random() * rps.length)];
 
     if (selectionPrompt === 'r' && compChoice === 'r' || selectionPrompt === 's' && compChoice === 's' || selectionPrompt === 'p' && compChoice === 'p'){
@@ -24,16 +24,20 @@ for (i = 0; i < 3; i++){
 }
 
 
+if (wins > losses){
+    alert('You won!')
+}
+else if (wins === losses){
+    alert('You tied.')
+}
+else {
+    alert('You lost.')
+}
 
 
-
-
-
-
-// conditional logic on who won the Game, if you won more than them
 alert(`
-    You won ${wins} time(s)!
-    You lost ${losses} time(s).
-    You tied ${ties} time(s).
+    Wins: ${wins} time(s)!
+    Losses: ${losses} time(s).
+    Ties: ${ties} time(s).
 `)
 
